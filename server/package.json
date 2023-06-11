@@ -1,0 +1,37 @@
+{
+  "name": "NASA_Mission_Control",
+  "version": "1.0.0",
+  "description": "NASA-Misson-Control-API",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "test-watch": "jest --watch",
+    "watch": "nodemon src/server.js --inspect",
+    "start": "node src/server.js",
+    "start-clusters": "pm2 start src/server.js -i max",
+    "start-cluster": "pm2 start src/server.js",
+    "monit-clusters": "pm2 monit",
+    "stop-clusters": "pm2 stop src/server.js",
+    "delete-clusters": "pm2 delete src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "csv-parse": "^5.3.6",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "mongoose": "^7.1.0",
+    "morgan": "^1.10.0",
+    "pm2": "^5.3.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3"
+  }
+}

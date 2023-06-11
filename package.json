@@ -1,0 +1,34 @@
+{
+  "name": "nasa_missioncontrol_(react_node)",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix client",
+    "install": "npm run install-server && npm run install-client",
+    "server": "npm run watch --prefix server",
+    "client": "npm start --prefix client",
+    "watch": "npm run server & npm run client",
+    "deploy-client": "npm run build --prefix client",
+    "deploy-server": "npm run build --prefix client && npm start --prefix server",
+    "deploy-cluster": "npm run build --prefix client && npm run clusters --prefix server",
+    "start-cluster": "npm run start-cluster --prefix server",
+    "start-clusters": "npm run start-clusters --prefix server",
+    "monit-clusters": "npm run monit-clusters --prefix server",
+    "stop-clusters": "npm run stop-clusters --prefix server",
+    "delete-clusters": "npm run delete-clusters --prefix server",
+    "test-server": "npm test --prefix server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Biswa-Dev/NASA_MissionControl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Biswa-Dev/NASA_MissionControl/issues"
+  },
+  "homepage": "https://github.com/Biswa-Dev/NASA_MissionControl#readme"
+}
