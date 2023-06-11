@@ -3,9 +3,9 @@ name: NASA Project CI
 # contrlo when this work flow will run
 on: 
   push:
-    branches: [ dev ]
+    branches: [ master ]
   pull_request:
-    branches: [ dev ]
+    branches: [ master ]
 # we can define jobs that are supposed to run when one of the above events triggered
 jobs:
   build:
