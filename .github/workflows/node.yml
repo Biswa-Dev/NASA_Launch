@@ -1,5 +1,5 @@
 # we name our workflow
-name: NASA Project CI
+name: NASA_Launch
 # contrlo when this work flow will run
 on:
   push:
