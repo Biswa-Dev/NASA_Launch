@@ -1,5 +1,5 @@
 # we name our workflow
-name: NASA_Launch
+name: NASA_Launch_CI_Pipeline
 # contrlo when this work flow will run
 on:
   push:
@@ -18,6 +18,8 @@ jobs:
     steps:
       # we can see that our first step uses a checkout action to check out the latest version of our code from master
       - uses: action/chekout@v2
+        with: 
+          repository: Biswa-Dev/NASA_Launch
       - name: Use Node version ${{ matrix.node-version }}
         uses: action/setup-node@v2
         with:
