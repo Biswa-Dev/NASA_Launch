@@ -17,9 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # we can see that our first step uses a checkout action to check out the latest version of our code from master
-      - uses: actions/chekout@v2
-        with: 
-          repository: Biswa-Dev/NASA_Launch
+      - uses: actions/checskout@v2
       - name: Use Node version ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
