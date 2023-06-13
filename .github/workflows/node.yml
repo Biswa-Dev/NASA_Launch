@@ -10,18 +10,18 @@ on:
 jobs:
   build:
     env:
-      CI: true # itwill disble the watch mode
+      CI: true # it will disble the watch mode
     strategy:
       matrix:
         node-version: [14.x, 16.x]
     runs-on: ubuntu-latest
     steps:
       # we can see that our first step uses a checkout action to check out the latest version of our code from master
-      - uses: action/chekout@v2
+      - uses: actions/chekout@v2
         with: 
           repository: Biswa-Dev/NASA_Launch
       - name: Use Node version ${{ matrix.node-version }}
-        uses: action/setup-node@v2
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
