@@ -11,9 +11,11 @@ jobs:
   build:
     env:
       CI: true # it will disble the watch mode
+      MONGO_URL: mongodb://localhost/nasa
     strategy:
       matrix:
         node-version: [14.x, 16.x]
+        mongodb-version: [ '4.4' ]
     runs-on: ubuntu-latest
     steps:
       # we can see that our first step uses a checkout action to check out the latest version of our code from master
@@ -22,6 +24,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Use MongoDb from GitHub actions
+        uses: supercharge/mongodb-github-action@1.9.0
       - run: npm install
       - run: npm run build --prefix client
       - run: npm run test-server
